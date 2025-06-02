@@ -1,23 +1,53 @@
-[tool.isort]
-profile = "black"
-include_trailing_comma = true
-multi_line_output = 3
-sections = ["FUTURE", "STDLIB", "THIRDPARTY", "NUMERIC", "PLOTTING", "BIO", "FIRSTPARTY", "LOCALFOLDER"]
-# also contains what we import in notebooks
-known_numeric = ["numpy", "scipy", "pandas", "sklearn", "networkx"]
-known_bio = ["anndata", "scanpy", "squidpy"]
-known_plotting = ["IPython", "matplotlib", "mpl_toolkits", "seaborn"]
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
 
-[tool.tox]
-legacy_tox_ini = """
-    [tox]
-    min_version = 4.0
-    env_list = lint
 
-    [testenv:lint]
-    description = Lint the notebooks.
-    deps = pre-commit>=3.0.0
-    skip_install = true
-    commands =
-        pre-commit run --all-files --show-diff-on-failure
-"""
+[project]
+name = "squidpy-notebooks"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+dependencies = [
+    "igraph>=0.11.8",
+    "ipython>=8.36.0",
+    "jupyter-console>=6.6.3",
+    "jupyterlab>=4.4.2",
+    "jupyterlab-vim>=4.1.4",
+    "leidenalg>=0.10.2",
+    "notebook>=7.4.2",
+    "spatialdata[extra,torch]",
+    "squidpy>=1.6.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+	"watermark"
+]
+doc = [
+    "sphinx>=4.5",
+    "sphinx-book-theme>=0.3.3",
+    "myst-nb",
+    "sphinxcontrib-bibtex>=1.0.0",
+    "sphinx-autodoc-typehints",
+	"sphinx-design",
+    # For notebooks
+    "ipython>=8.6.0",
+    "sphinx-copybutton",
+]
+
+[tool.ruff]
+line-length = 120
+exclude = ["notebooks/developers_resources/storage_format/__template__.ipynb"]
+
+[tool.ruff.lint]
+ignore = ["E402", "F821"]
+
+[tool.jupytext]
+formats = "ipynb,md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["notebooks"]
