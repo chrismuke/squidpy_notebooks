@@ -65,3 +65,13 @@ This section contains various examples from the :mod:`squidpy.pl` module.
     :glob:
 
     plotting/plot_*
+
+
+Older versions
+---------------
+This section contains tutorials and examples that have since been deprecated from Squidpy. They are listed here for reference.
+
+.. toctree::
+    :maxdepth: 1
+
+    older_versions/compute_crops.ipynb
