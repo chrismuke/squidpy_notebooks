@@ -69,7 +69,7 @@ This section contains various examples from the :mod:`squidpy.pl` module.
 
 Older versions
 ---------------
-This section contains examples from older versions of Squidpy. Kept here for reference.
+This section contains tutorials and examples that have since been deprecated from Squidpy. They are listed here for reference.
 
 .. toctree::
     :maxdepth: 1
