@@ -28,7 +28,6 @@ Advanced Tutorials
 This section contains tutorials showcasing advanced :mod:`squidpy` functionalities, such as:
 
     - loading spatial data.
-    - interactive visualization.
     - working with z-stacks.
 
 .. toctree::
@@ -36,7 +35,6 @@ This section contains tutorials showcasing advanced :mod:`squidpy` functionaliti
 
     tutorial_read_spatial
     tutorial_image_container
-    tutorial_napari
     tutorial_image_container_zstacks
 
 
