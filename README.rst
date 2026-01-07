@@ -7,7 +7,7 @@ Squidpy - Spatial Single Cell Analysis in Python
 
     <p align="center">
         <a href="https://squidpy.readthedocs.io/en/stable/">
-            <img src="https://github.com/scverse/squidpy/tree/main/docs/_static/imgsquidpy_horizontal.png?raw=true"
+            <img src="https://raw.githubusercontent.com/scverse/squidpy/main/docs/_static/img/squidpy_horizontal.png"
              width="400px" alt="Squidpy logo">
         </a>
     </p>
@@ -22,7 +22,7 @@ tissue images if available.
 
     <p align="center">
         <a href="https://doi.org/10.1038/s41592-021-01358-2">
-            <img src="https://raw.githubusercontent.com/scverse/squidpy/main/docs/source/_static/img/figure1.png"
+            <img src="https://raw.githubusercontent.com/scverse/squidpy/main/docs/_static/img/figure1.png"
              width="400px" alt="Squidpy title figure">
         </a>
     </p>
@@ -38,15 +38,13 @@ Squidpy's key applications
 - Build and analyze the neighborhood graph from spatial coordinates.
 - Compute spatial statistics for cell-types and genes.
 - Efficiently store, analyze and visualize large tissue images, leveraging `skimage`_.
-- Interactively explore `anndata`_ and large tissue images in `napari`_.
+- Interactively explore spatial data with `napari-spatialdata`_.
 
 Installation
 ------------
 Install Squidpy via PyPI by running::
 
     pip install squidpy
-    # or with napari included
-    pip install 'squidpy[interactive]'
 
 or via Conda as::
 
@@ -91,7 +89,7 @@ We are happy about any contributions! Before you start, check out our `contribut
 .. _Palla, Spitzer et al. (2022): https://doi.org/10.1038/s41592-021-01358-2
 .. _scanpy: https://scanpy.readthedocs.io/en/stable/
 .. _anndata: https://anndata.readthedocs.io/en/stable/
-.. _napari: https://napari.org/
+.. _napari-spatialdata: https://github.com/scverse/napari-spatialdata
 .. _skimage: https://scikit-image.org/
 .. _documentation: https://squidpy.readthedocs.io/en/stable/
 .. _website: https://scverse.org/
